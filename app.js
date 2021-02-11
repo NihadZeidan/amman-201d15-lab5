@@ -86,10 +86,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; 
 
 function sumArray(sumArr) {
-  let sum1= testArray
-  let summing = sum(2, 3)[0]
-  let finalsumming = sum(summing, 4)[0]
-  return[finalsumming, `2,3,4 was passed in as an array of numbers, and ${finalsumming} is their sum.`]
+  let firstIndex= testArray[0];
+  let secondIndex= testArray[1];
+  let thirdIndex= testArray[2];
+  
+  let summing = sum(firstIndex, secondIndex)[0]
+  let finalsumming2= sum(summing, thirdIndex)[0]
+  // console.log(finalsumming2)
+
+  return[finalsumming2, `2,3,4 was passed in as an array of numbers, and ${finalsumming2} is their sum.`]
   //eslint-disable-line
 }
 
@@ -111,11 +116,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let firstIndex= testArray[0];
+  let secondIndex= testArray[1];
+  let thirdIndex= testArray[2];
+
+  let multiarray1= multiply(firstIndex, secondIndex)[0]
+  let finalmulti= multiply(multiarray1, thirdIndex)[0]
+
+  return[finalmulti, `The numbers 2,3,4 have a product of ${finalmulti}.` ]
+
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
