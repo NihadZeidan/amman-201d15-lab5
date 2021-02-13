@@ -150,6 +150,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
+final-goal
 let testDynamicArray = [0, 1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
@@ -160,11 +161,7 @@ function multiplyAnyArray(dynamicArray) {
   
   return[multi_4[0], `The numbers 1,2,3,4,5 have a product of ${multi_4[0]}.`]
   
-  //eslint-disable-line
-}
-
-
-
+=======
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyAnyArray(testDynamicArray);
 
