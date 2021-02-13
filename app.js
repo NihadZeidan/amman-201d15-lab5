@@ -153,12 +153,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  let multi-1= multiply(testDynamicArray[0], testDynamicArray[1])
-  let multi-2= multiply(multi-1[0], testDynamicArray[2])
-  let multi-3= multiply(multi-2[0], testDynamicArray[3])
-  let multi-4= multiply(multi-3[0], testDynamicArray[4])
+  let multi_1= multiply(testDynamicArray[0], testDynamicArray[1])
+  let multi_2= multiply(multi_1[0], testDynamicArray[2])
+  let multi_3= multiply(multi_2[0], testDynamicArray[3])
+  let multi_4= multiply(multi_3[0], testDynamicArray[4])
   
-  return(multi-4[0], `The numbers 1,2,3,4,5 have a product of ${multi-4[0]}.`)
+  return[multi_4[0], `The numbers 1,2,3,4,5 have a product of ${multi_4[0]}.`]
   
   //eslint-disable-line
 }
