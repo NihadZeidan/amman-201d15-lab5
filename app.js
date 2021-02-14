@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  let sumResult = a+b;
-  return [sumResult,`The sum of ${a} and ${b} is ${sumResult}.`]
-  
+  let sumResult = a + b;
+  return [sumResult, `The sum of ${a} and ${b} is ${sumResult}.`]
+
   //eslint-disable-line
 }
 
@@ -31,12 +31,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   let output = a * b;
-  return[output,`The product of ${a} and ${b} is ${output}.`]
+  return [output, `The product of ${a} and ${b} is ${output}.`]
   //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -61,13 +61,13 @@ function sumAndMultiply(a, b, c) {
   let multiplyAb = multiply(a, b)[0];
   let newMultiply = multiply(multiplyAb, c);
 
-  return[newSum [0], newMultiply[0], `${a} and ${b} and ${c} sum to ${newSum[0]}.`, `The product of ${a} and ${b} and ${c} is ${newMultiply[0]}.`]
+  return [newSum[0], newMultiply[0], `${a} and ${b} and ${c} sum to ${newSum[0]}.`, `The product of ${a} and ${b} and ${c} is ${newMultiply[0]}.`]
   //eslint-disable-line
-  
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -83,18 +83,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 //eslint-disable-line
-let testArray = [2, 3, 4]; 
+let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
-  let firstIndex= testArray[0];
-  let secondIndex= testArray[1];
-  let thirdIndex= testArray[2];
-  
-  let summing = sum(firstIndex, secondIndex)[0]
-  let finalsumming2= sum(summing, thirdIndex)[0]
-  // console.log(finalsumming2)
+  for (let i = 0; i < testArray.length; i++) {
 
-  return[finalsumming2, `2,3,4 was passed in as an array of numbers, and ${finalsumming2} is their sum.`]
+    let summing = sum(testArray[0], testArray[1])[0]
+    let finalSumming = sum(summing, testArray[2])[0]
+    return [finalSumming, `2,3,4 was passed in as an array of numbers, and ${finalSumming} is their sum.`]
+  }
   //eslint-disable-line
 }
 
@@ -116,14 +113,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  let firstIndex= testArray[0];
-  let secondIndex= testArray[1];
-  let thirdIndex= testArray[2];
+  let firstIndex = testArray[0];
+  let secondIndex = testArray[1];
+  let thirdIndex = testArray[2];
 
-  let multiarray1= multiply(firstIndex, secondIndex)[0]
-  let finalmulti= multiply(multiarray1, thirdIndex)[0]
+  let multiarray1 = multiply(firstIndex, secondIndex)[0]
+  let finalmulti = multiply(multiarray1, thirdIndex)[0]
 
-  return[finalmulti, `The numbers 2,3,4 have a product of ${finalmulti}.` ]
+  return [finalmulti, `The numbers 2,3,4 have a product of ${finalmulti}.`]
 
   //eslint-disable-line
 }
@@ -153,13 +150,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  let multi_1= multiply(testDynamicArray[0], testDynamicArray[1])
-  let multi_2= multiply(multi_1[0], testDynamicArray[2])
-  let multi_3= multiply(multi_2[0], testDynamicArray[3])
-  let multi_4= multiply(multi_3[0], testDynamicArray[4])
-  
-  return[multi_4[0], `The numbers 1,2,3,4,5 have a product of ${multi_4[0]}.`]
-  
+  for (let i = 0; i < testDynamicArray.length; i++) {
+    let multi_1 = multiply(testDynamicArray[0], testDynamicArray[1])
+    let multi_2 = multiply(multi_1[0], testDynamicArray[2])
+    let multi_3 = multiply(multi_2[0], testDynamicArray[3])
+    let multi_4 = multiply(multi_3[0], testDynamicArray[4])
+
+    return [multi_4[0], `The numbers 1,2,3,4,5 have a product of ${multi_4[0]}.`]
+  }
+
   //eslint-disable-line
 }
 
